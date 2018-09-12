@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  inicio: 2018-09-12 08:39:36
+  termino: 2018-09-12 08:39:36
+  responsable: MyString
+  estado: MyString
+
+two:
+  nombre: MyString
+  inicio: 2018-09-12 08:39:36
+  termino: 2018-09-12 08:39:36
+  responsable: MyString
+  estado: MyString

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @todo_list.nombre %>
+</p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @todo_list.inicio %>
+</p>
+
+<p>
+  <strong>Termino:</strong>
+  <%= @todo_list.termino %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @todo_list.responsable %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @todo_list.estado %>
+</p>
+
+<div id="todo_items_wrapper">
+ <%= render @todo_list.todo_items %>
+ <div id="form">
+  <%= render "todo_items/form" %>
+ </div>
+</div>
+
+<%= link_to 'Editar', edit_todo_list_path(@todo_list) %> |
+<%= link_to 'Volver', todo_lists_path %>
