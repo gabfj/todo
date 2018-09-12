@@ -1,35 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Todo Lists</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Inicio</th>
-      <th>Termino</th>
-      <th>Responsable</th>
-      <th>Estado</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @todo_lists.each do |todo_list| %>
-      <tr>
-        <td><%= todo_list.nombre %></td>
-        <td><%= todo_list.inicio %></td>
-        <td><%= todo_list.termino %></td>
-        <td><%= todo_list.responsable %></td>
-        <td><%= todo_list.estado %></td>
-        <td><%= link_to 'Ver', todo_list %></td>
-        <td><%= link_to 'Editar', edit_todo_list_path(todo_list) %></td>
-        <td><%= link_to 'Eliminar', todo_list, method: :delete, data: { confirm: 'Está seguro de eliminar?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Nueva Tarea', new_todo_list_path %>
+<div class="index_row clearfix">
+  <h2 class="todo_list_title">Listado de Tareas</h2>
+</div>
+<% @todo_lists.each do |todo_list| %>
+  <div class="row clearfix">
+    <div class="todo_item">
+      <p class="todo_list_sub_title"><%= link_to todo_list.nombre, todo_list %> [ Estado : <%= todo_list.estado %> ]</p>
+    </div>
+  </div>
+<% end %>
+  <div class="links">
+    <%= link_to "Nueva Tarea", new_todo_list_path %>
+  </div>
